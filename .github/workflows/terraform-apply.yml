@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  TF_CLOUD_ORGANIZATION: "Neeha_Terraform_CICD"
+  TF_CLOUD_ORGANIZATION: "Jose_Terraform_CICD"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "Neeha_GitHub_Actions"
+  TF_WORKSPACE: "GitHub_Terraform_Workflows_Final_Activity"
   CONFIG_DIRECTORY: "./terraform/"
 
 jobs:
@@ -43,3 +43,5 @@ jobs:
         with:
           run: ${{ steps.apply-run.outputs.run_id }}
           comment: "Apply Run from GitHub Actions CI ${{ github.sha }}"
+
+#comment
