@@ -1,12 +1,18 @@
 name: "Terraform Plan"
 
 on:
+  push:
+    branches:
+      - update-tf-org  # <--- Tu rama actual
+  workflow_dispatch:   # <--- Para que puedas darle al botón de "Run" manual
   pull_request:
+    branches:
+      - update-tf-org
 
 env:
-  TF_CLOUD_ORGANIZATION: "Neeha_Terraform_CICD"
+  TF_CLOUD_ORGANIZATION: "Gi-TerraformCourse"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
-  TF_WORKSPACE: "Neeha_GitHub_Actions"
+  TF_WORKSPACE: "gi_GitHub_Actions"
   CONFIG_DIRECTORY: "./terraform/"
 
 jobs:
